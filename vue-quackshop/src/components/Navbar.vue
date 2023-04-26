@@ -11,7 +11,6 @@
                 <b-nav-item to="/about">About</b-nav-item>
             </b-navbar-nav>
 
-            <!-- Right aligned nav items -->
             <b-navbar-nav class="ms-auto">
 
                 <b-nav-item-dropdown text="Lang" right>
