@@ -11,5 +11,14 @@
 
         <button type="button" class="btn btn-link">Link</button>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <b-button>Button</b-button>
+        <b-button variant="danger">Button</b-button>
+        <b-button variant="success">Button</b-button>
+        <b-button variant="outline-primary">Button</b-button>
+    </div>
     <RouterLink to="/about">About</RouterLink>
 </template>
