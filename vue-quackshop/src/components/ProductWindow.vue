@@ -1,6 +1,6 @@
 <script setup>
     import { ref } from 'vue';
-    import axios from "axios";
+    import ProductService from '@/Services/ProductService'
 
     const props = defineProps({ modelValue: Object})
     const {config} = rebuildConfig()
@@ -18,20 +18,18 @@
         }
     }
 
-    async function submit() {
+    async function foo() {
         console.log(config.value)
-        debugger;
-        let response = await axios.post("http://localhost:8080/product",{
-            config: JSON.stringify(config.value),
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
+        
+        const resp = await ProductService.create({
+            name: config.value.name,
+            description: config.value.description,
+            image_path: config.value.image_path,
+            published: config.value.published,
         });
+        console.log(resp)
 
-        configDetails.value = response.data
+        debugger;
         // call api taponn/ par le express
         // axios en post, 
     }
@@ -55,9 +53,7 @@
         <input v-model="config.published"
             class="bg-gray-50 border text-black text-sm rounded-lg block ml-2 p-2.5 font-semibold w-1/3"
             type="checkbox"> Published
-
-        <button @click="submit">Submit</button>
-
-    </form>
+        </form>
+    <button @click="foo">Submit</button>
    </div>
 </template>
