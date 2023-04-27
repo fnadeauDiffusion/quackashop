@@ -10,6 +10,9 @@
             <b-navbar-nav>
                 <b-nav-item to="/about">About</b-nav-item>
             </b-navbar-nav>
+            <b-navbar-nav>
+                <b-nav-item to="/admin">Admin</b-nav-item>
+            </b-navbar-nav>
 
             <b-navbar-nav class="ms-auto">
 
