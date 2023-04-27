@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar id="navbar" toggleable="lg" type="dark" variant="dark">
             
             <b-navbar-brand to="/">QuackShop</b-navbar-brand>
 

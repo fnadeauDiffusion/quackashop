@@ -1,2 +1,45 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import 'bootstrap-vue-next/dist/bootstrap-vue-next.css';
+
+#navbar {
+    background-color:#95C93D!important;
+}
+
+.primary-color {
+    color:#95C93D;
+}
+
+.primary-color-bg {
+    background-color:#95C93D;
+}
+
+.secondary-color {
+    color:#242424;
+}
+
+.secondary-color-bg {
+    background-color:#242424;
+}
+
+body {
+	color:#95C93D;
+	background-color:#242424;
+}
+
+.card {
+    width: 320px;
+	height: auto;
+	min-height: 320px;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 10px 15px;
+	margin-bottom: 24px;
+	margin-right: 10px;
+	transition: all 0.2s linear;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
