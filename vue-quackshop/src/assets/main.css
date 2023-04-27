@@ -1,6 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import 'bootstrap-vue-next/dist/bootstrap-vue-next.css';
 
+.black-text{
+    color: black;
+}
+
 #navbar {
     background-color:#95C93D!important;
 }
