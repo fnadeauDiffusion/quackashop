@@ -5,8 +5,6 @@ const cors = require("cors");
 const app = express();
 const db = require("./app/models");
 
-db.sequelize.sync({ force: true });
-
 var corsOptions = {
   origin: "http://localhost:8080"
 };
@@ -24,6 +22,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to quackshop." });
 });
 
+<<<<<<< HEAD
 app.post('/register', (req, res) => {
   res.send({
     message: `helloo ${req.body.username}!!`
@@ -43,8 +42,17 @@ app.post("/product", (req, res) => {
   res.json({ message: "product created!" });
 });
 
+=======
+>>>>>>> 4ffa767 (comunication)
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+
+require('./app/routes/routes.js')(app)
+
+db.sequelize.sync({ 
+  force: true 
+  }).then( () => {
+    app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
+  });
 });
