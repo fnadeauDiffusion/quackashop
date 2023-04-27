@@ -18,10 +18,10 @@
         }
     }
 
-    function submit() {
+    async function submit() {
         console.log(config.value)
-        let url = '/product'
-        const response = axios.post(url,{
+        debugger;
+        let response = await axios.post("http://localhost:8080/product",{
             config: JSON.stringify(config.value),
         })
         .then(function (response) {
