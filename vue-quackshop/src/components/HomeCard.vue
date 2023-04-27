@@ -1,6 +1,6 @@
 <template>
     <RouterLink :to="link">
-        <div class="homecard primary-color-bg secondary-color">
+        <div class="card homecard primary-color-bg secondary-color">
             <h1>       
                 <slot />
             </h1>
