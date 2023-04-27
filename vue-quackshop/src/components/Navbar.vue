@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar id="navbar" toggleable="lg" type="dark" variant="info">
             
             <b-navbar-brand to="/">QuackShop</b-navbar-brand>
 
@@ -21,6 +21,7 @@
                 </b-nav-item-dropdown>
 
                 <b-nav-item to="/login">Login</b-nav-item>
+                <b-nav-item to="/register">Register</b-nav-item>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>

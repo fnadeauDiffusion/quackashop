@@ -8,7 +8,7 @@ const db = require("./app/models");
 db.sequelize.sync({ force: true });
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:5173"
 };
 
 app.use(cors(corsOptions));
@@ -23,6 +23,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to quackshop." });
 });
+
+app.post('/register', (req, res) => {
+  res.send({
+    message: `helloo ${req.body.username}!!`
+  })
+}) 
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
